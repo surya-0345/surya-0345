@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a0d" />
+      <stop offset="50%" stop-color="#0a0f14" />
+      <stop offset="100%" stop-color="#06090c" />
+    </linearGradient>
+
+    <!-- Radial Green Glow Behind Text -->
+    <radialGradient id="centerGlow" cx="50%" cy="52%" r="48%">
+      <stop offset="0%" stop-color="#39FF88" stop-opacity="0.32" />
+      <stop offset="40%" stop-color="#22C55E" stop-opacity="0.16" />
+      <stop offset="75%" stop-color="#16A34A" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#070a0d" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Developer Grid Pattern -->
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#22C55E" stroke-width="0.8" stroke-opacity="0.09" />
+    </pattern>
+
+    <!-- Strong Neon Glow Filter -->
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feGaussianBlur stdDeviation="15" result="blur3" />
+      <feGaussianBlur stdDeviation="28" result="blur4" />
+      <feMerge>
+        <feMergeNode in="blur4" />
+        <feMergeNode in="blur3" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Soft Glow Filter -->
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .hud-bracket {
+      stroke: #39FF88;
+      stroke-width: 3.5;
+      stroke-linecap: square;
+      fill: none;
+      filter: drop-shadow(0 0 4px #39FF88);
+    }
+    .hud-frame {
+      fill: url(#bgGrad);
+      stroke: #16A34A;
+      stroke-width: 1.2;
+      stroke-opacity: 0.45;
+    }
+    .pill-badge {
+      fill: #0c1319;
+      stroke: #22C55E;
+      stroke-width: 1.2;
+      stroke-opacity: 0.85;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 2.4px;
+      fill: #39FF88;
+    }
+    .main-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: 3.5px;
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 3.8px;
+      fill: #39FF88;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Base Card Background -->
+  <rect x="12" y="12" width="876" height="206" rx="10" class="hud-frame" />
+
+  <!-- Grid Overlay -->
+  <rect x="12" y="12" width="876" height="206" rx="10" fill="url(#grid)" />
+
+  <!-- Central Radial Glow Backdrop -->
+  <ellipse cx="450" cy="120" rx="340" ry="85" fill="url(#centerGlow)" />
+
+  <!-- HUD Corner Brackets (Glowing Neon Green) -->
+  <!-- Top Left -->
+  <path d="M 12 40 L 12 12 L 40 12" class="hud-bracket" />
+  <!-- Top Right -->
+  <path d="M 860 12 L 888 12 L 888 40" class="hud-bracket" />
+  <!-- Bottom Left -->
+  <path d="M 12 190 L 12 218 L 40 218" class="hud-bracket" />
+  <!-- Bottom Right -->
+  <path d="M 860 218 L 888 218 L 888 190" class="hud-bracket" />
+
+  <!-- Top Status Pill Badge -->
+  <g transform="translate(450, 42)">
+    <rect x="-140" y="-14" width="280" height="28" rx="14" class="pill-badge" />
+    <!-- Pulsing Green Dot -->
+    <circle cx="-114" cy="0" r="7" fill="#39FF88" opacity="0.3" filter="url(#glow-soft)" />
+    <circle cx="-114" cy="0" r="4" fill="#39FF88" />
+    <text x="7" y="4" class="pill-text" text-anchor="middle">BUILDING REAL-WORLD TECH</text>
+  </g>
+
+  <!-- Main Glowing Name: SURIYA PRAKASH B -->
+  <!-- Neon Underglow Layers -->
+  <text x="450" y="128" class="main-title" fill="#22C55E" opacity="0.9" filter="url(#neon-glow)">SURIYA PRAKASH B</text>
+  <text x="450" y="128" class="main-title" fill="#39FF88" opacity="0.75" filter="url(#glow-soft)">SURIYA PRAKASH B</text>
+  <!-- Sharp White Foreground -->
+  <text x="450" y="128" class="main-title" fill="#FFFFFF">SURIYA PRAKASH B</text>
+
+  <!-- Subtitle with Bullet Separators -->
+  <text x="450" y="165" class="subtitle">
+    SOFTWARE DEVELOPER <tspan fill="#22C55E">•</tspan> FULL STACK DEVELOPER
+  </text>
+
+  <!-- Bottom Accent Diamond -->
+  <g transform="translate(450, 186)">
+    <rect x="-4.5" y="-4.5" width="9" height="9" rx="1.5" transform="rotate(45)" fill="#39FF88" filter="url(#glow-soft)" />
+    <rect x="-3" y="-3" width="6" height="6" rx="1" transform="rotate(45)" fill="#FFFFFF" />
+  </g>
+</svg>

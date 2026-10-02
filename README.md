@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117,16A34A,22C55E&height=180&section=header&text=SURIYA%20PRAKASH%20B&fontSize=38&fontAlignY=38&fontColor=ffffff&desc=Software%20Developer%20%7C%20Full%20Stack%20Developer&descAlignY=62&descColor=39FF88" width="100%" alt="Header Banner" />
+  <img src="./header.svg" width="100%" alt="SURIYA PRAKASH B — Software Developer" />
 
   <br/>
 
